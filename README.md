@@ -14,16 +14,20 @@ Tests are appreciated.
 
 ### Backend
 
-- register user with email, and password
+Please implement the following features to the backend
+
+- register a user with email, and password
 - save a user's profile, which includes name, email address, phone, profile picture, and company
 - add friend(s) for a user
 - view friends of a user's
 
 ### Frontend
 
-- A login page
+Please implement the following features in frontend
+
 - A register page with fields to enter name, email address, phone, profile picture, and company
-- A page to view a user's profile by user ID, and a button to add the user as a friend, if not already added or viewing one's own profile
+- A login page
+- A protected page to view a user's profile by user ID, and a button to add the user as a friend, if not already added or viewing one's own profile
 - A page to show a user's friends
 
 
