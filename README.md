@@ -12,23 +12,44 @@ Tests are appreciated.
 
 ## Tasks
 
-### Backend
+Hilbert's Grand Hotel is going to launch a campaign online which sells packages including a flight and 1-day accommodation at a very low price.
 
-Please implement the following features to the backend
-- register a user with username and password
-- an endpoint for user to login with password
-- get details of a product
-- get the list of all products with pagination
+Here is an example of the packages in JSON:
+
+```js
+{
+  "packages": [
+    { "id": 1, "flight": "Flight-1", "stay": "2022-08-09", "price": 100, quota: 1 },
+    { "id": 2, "flight": "Flight-2", "stay": "2022-08-09", "price": 100, quota: 2 },
+    { "id": 3, "flight": "Flight-3", "stay": "2022-08-10", "price": 100, quota: 2 },
+    { "id": 4, "flight": "Flight-3", "stay": "2022-08-11", "price": 100, quota: 2 }
+  ]
+}
+```
 
 ### Frontend
 
 Please implement the following features in frontend
 
-- A register page with fields to enter username and password for anyone to register an account
-- a render counter in register page to show how many times did the register form rendered in real time
-- A login page
-- A protected page requires login to add/update a product
-- A protected page to view list of products
+- a page to place select pacakges and place an order with an email
+- a result page that shows the order with details, or simply a fail message
+- a page to show an order by order ID with the email used when purchase the order
+
+### Backend
+
+Please implement the following features in backend
+
+
+- an endpoint to reserve flight
+  - Please fail 50% of the reservation randomly
+- an endpoint to reserve a hotel room
+  - a valid flight ticket number MUST be provided in order to make the reservation
+- an endpoint to purchase a package
+  - only allow to purchase package with quota > 0, if quota runs out, throw an exception
+  - consume 1 quota before reserving flight and hotel room as to avoid oversale
+  - release the quota (add back 1) once either flight or hotel room reservation fail
+- an endpoint to retrieve the order by ID and email
+
 
 
 ### Design and explanations
