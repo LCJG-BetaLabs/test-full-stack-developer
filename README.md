@@ -1,7 +1,7 @@
 # test-full-stack-developer
 Repository for full-stack developer written test
 
-Please use NodeJS or Python, with any extra tech stack of your choice.
+Please use NodeJS, with any extra tech stack of your choice.
 
 Kindly create a private repository and invite [lcjg-betalabstech](https://github.com/lcjg-betalabstech) as a collaborator when you feel comfortable to request a review.
 
